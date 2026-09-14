@@ -7,8 +7,8 @@ search_config:
   query_task_type: "RETRIEVAL_QUERY"
   embedding_label: "base_text_embedding"
   vector_search_algo: "ANN"
-  limit: 50
+  limit: 500
   num_leaves: 10
-  threshold: 0.5
+  threshold: 0.3
 postprocessing:
   - "none"
