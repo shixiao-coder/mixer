@@ -104,8 +104,8 @@ func TestReadSpannerSearchConfig(t *testing.T) {
 	if indicatorCfg.QueryTaskType != QueryTaskTypeRetrievalQuery {
 		t.Errorf("Expected QueryTaskType=%s, got %s", QueryTaskTypeRetrievalQuery, indicatorCfg.QueryTaskType)
 	}
-	if indicatorCfg.EmbeddingLabel != "nl_stat_var_embedding" {
-		t.Errorf("Expected EmbeddingLabel=nl_stat_var_embedding, got %s", indicatorCfg.EmbeddingLabel)
+	if indicatorCfg.EmbeddingLabel != "base_text_embedding" {
+		t.Errorf("Expected EmbeddingLabel=base_text_embedding, got %s", indicatorCfg.EmbeddingLabel)
 	}
 	if len(indicatorCfg.IncludedTypes) != 2 || indicatorCfg.IncludedTypes[0] != "StatisticalVariable" || indicatorCfg.IncludedTypes[1] != "Topic" {
 		t.Errorf("Expected IncludedTypes=[StatisticalVariable, Topic], got %v", indicatorCfg.IncludedTypes)
@@ -193,5 +193,3 @@ func TestNewSpannerDataSource_SearchConfigPath(t *testing.T) {
 		t.Errorf("Expected EmbeddingLabel=base_text_embedding, got %v", sc)
 	}
 }
-
-
